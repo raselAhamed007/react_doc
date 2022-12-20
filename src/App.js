@@ -1,4 +1,6 @@
 import Calculator from './components/Calculator';
+import Emoji from './components/composition/Emoji';
+import Text from './components/composition/Text';
 import Form from './components/Form';
 
 function App() {
@@ -9,6 +11,16 @@ function App() {
       <Form />
       <br/>
       <Calculator />
+      <br/>
+      <br/>
+      <Text />
+      <br/>
+      <br/>
+      <Emoji>
+        {
+          ({addEmoji}) => <Text addEmoji={addEmoji}/>
+        }
+      </Emoji>
     </div>
   );
 }
